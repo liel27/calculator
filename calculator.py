@@ -1,4 +1,5 @@
 import math
+import sys
 
 # get_calc_options function return a string which contain all calc options (option in each line)
 def get_calc_options():
@@ -10,6 +11,7 @@ def get_calc_options():
     5. Modulo   %
     6. PI   pi
     7. Help   usage
+    8. Exit exit
     """
     return options
 
@@ -35,6 +37,8 @@ def calculate(num1, operation, num2):
         return str(num1) + "/" + str(num2) + "=" + str(num1/num2)
     elif operation == "%":
         return str(num1) + "%" + str(num2) + "=" + str(num1%num2)
+    elif operation== "exit":
+        sys.exit()
     else:
         return "Invalid input"
 
